@@ -8,7 +8,10 @@ gem 'rails', '~> 5.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'devise'
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end 
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -61,8 +64,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
